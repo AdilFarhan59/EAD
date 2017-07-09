@@ -1,0 +1,189 @@
+﻿@model EAD_Project.Models.Doctor
+
+@{Layout = null;} 
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="~/Content/style_add_doctor_new.css" rel='stylesheet' type='text/css' />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--webfonts-->
+
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <!--//webfonts-->
+</head>
+<body background="~/img/wallpaper2.jpg">
+    <div class="main">
+        <div class="social-icons">
+            <div class="col_1_of_f span_1_of_f">
+                <a href="#">
+                    <ul class='facebook'>
+                        <i class="fb"> </i>
+                        <li>Connect with Facebook</li>
+                        <div class='clear'> </div>
+                    </ul>
+                </a>
+            </div>
+            <div class="col_1_of_f span_1_of_f">
+                <a href="#">
+                    <ul class='twitter'>
+                        <i class="tw"> </i>
+                        <li>Connect with Twitter</li>
+                        <div class='clear'> </div>
+                    </ul>
+                </a>
+            </div>
+            <div class="clear"> </div>
+        </div>
+        <h2>Or Signup with</h2>
+        @using (Html.BeginForm("Add_doctor_new", "Home"))
+        {
+            <div class="lable">
+                <div class="col_1_of_2 span_1_of_2">
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.FirstName)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.FirstName, new { @class = "text",placeholder="First Name" })
+                        @Html.ValidationMessageFor(model => model.FirstName)
+                    </div>
+                </div>
+
+                <div class="col_1_of_2 span_1_of_2">
+
+                    @Html.LabelFor(model => model.LastName)
+
+
+                    @Html.TextBoxFor(model => model.LastName, new { @class = "text", placeholder = "Last Name" })
+                    @Html.ValidationMessageFor(model => model.LastName)
+
+                </div>
+
+                <div class="clear"> </div>
+            </div>
+
+            <div class="lable-2">
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Password)
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Password, new { @class = "text", placeholder = "Password" })
+                    @Html.ValidationMessageFor(model => model.Password)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.PhoneNo)
+                </div>
+
+                @Html.TextBoxFor(model => model.PhoneNo, new { @class = "text", placeholder = "Phone Number" })
+                @Html.ValidationMessageFor(model => model.PhoneNo)
+
+
+
+               
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Address)
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Address, new { @class = "text", placeholder="Address" })
+                    @Html.ValidationMessageFor(model => model.Address)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Age)
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Age, new {@class="text", placeholder="Age"})
+                    @Html.ValidationMessageFor(model => model.Age)
+                   </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Fees)
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Fees, new {@class="text", placeholder="Fees"})
+                    @Html.ValidationMessageFor(model => model.Fees)
+                   </div>
+
+
+                 <div class="editor-label">
+                 @Html.LabelFor(model => model.Email)
+            </div>
+            <div class="editor-field">
+                 @Html.TextBoxFor(model => model.Email, new {@class="text", placeholder="Email"})
+                 @Html.ValidationMessageFor(model => model.Email)
+            </div>
+                   
+
+             <div class="editor-label">
+                        @Html.LabelFor(model => model.Gender)
+                    </div>
+                    <div class="editor-field">
+                        @Html.DropDownList("Gender", new List<SelectListItem>
+                 {
+                    new SelectListItem{Text="Male", Value="1", Selected  = true},
+                    new SelectListItem{Text="Female", Value="2"}
+                 }, "--Select Gender--", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Gender)
+                    </div>
+
+
+                 <div class="editor-label">
+                  @Html.LabelFor(model => model.Speciality)
+            </div> 
+                    <div class="editor-field">
+                 @Html.DropDownList("Specialist", new List<SelectListItem>
+                 {
+                    new SelectListItem{Text="Orthopedic", Value="6", Selected  = true}, 
+                    new SelectListItem{Text="Cardiologist", Value="7"}, 
+                    new SelectListItem{Text="General Physician", Value="3"}, 
+                    new SelectListItem{Text="Psychiatrist", Value="4"}, 
+                    new SelectListItem{Text="Neurossurgeon", Value="5"}
+                 }, "--Select Speciality--", new { @class = "form-control" })
+                  @Html.ValidationMessageFor(model => model.Speciality)
+            </div>
+                
+             <div class="editor-label">
+                 @Html.LabelFor(model => model.Instituite)
+            </div>
+            <div class="editor-field">
+                 @Html.DropDownList("Institute", new List<SelectListItem>
+                 {
+                    new SelectListItem{Text="FMH College of Medicine and Dentistry, Lahore", Value="1", Selected  = true}, 
+                    new SelectListItem{Text="Lahore Medical and Dental College, Lahore", Value="2"}, 
+                    new SelectListItem{Text="University College of Medicine and Dentistry, Lahore", Value="3"}, 
+                    new SelectListItem{Text="Sharif Medial and Dental College, Lahore", Value="4"}, 
+                    new SelectListItem{Text="Central Park Medial College, Lahore", Value="5"} 
+                 }, "--Select Institute--", new { @class = "form-control" })
+                 @Html.ValidationMessageFor(model => model.Instituite)
+            </div>
+                 
+
+                </div>
+
+            <h3>By creating an account, you agree to our <span class="term"><a href="#">Terms & Conditions</a></span></h3>
+
+            <div class="submit">
+                <input type="submit" value="Create account" class="form-submit">
+            </div>
+
+            <div class="clear"> </div>
+        }
+        <!-----//end-main---->
+    </div>
+    <!-----start-copyright---->
+    <div class="copy-right">
+        <p>Template by <a href="http://w3layouts.com">w3layouts</a></p>
+    </div>
+    <!-----//end-copyright---->
+</body>
+</html>

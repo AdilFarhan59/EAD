@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "_About";
+}
+
+<html lang="en">
+	<head>
+		<title>MyClinic</title>
+		<link rel="stylesheet" href="~/Content/styles.css" />
+	</head>
+<body background="~/img/wallpaper.png">
+<div class="wrapper">
+	<div id="header" class="clear">
+	    <a href="about.html">
+            <img src="~/img/logo.jpg" class="logo left">
+        </a>
+	  <div id="menu" class="right">
+			<div class="nav_top clear">
+            @RenderSection("Logout", false)
+            @RenderSection("Login", false)
+			</div>
+		  <nav>
+              @RenderSection("About", false)
+              @RenderSection("PatientAbout", false)
+              @RenderSection("DoctorAbout", false)
+			</nav>
+		</div>
+	</div>
+
+	<div id="content" class="about">
+	  <h2>About <strong>Us</strong></h2>
+<p>MyClinic is an independent, not for profit, Free Clinic that provides Primary Medical Care, Behavioral Heatlh Counseling, Specialty Care (as available) to uninsured families with limited financial resources residing mainly in the northern Palm Beach County area. MyClinic also offers a referral program for patients who are in need of urgent dental services. The MyClinic Dental Referral Program consists of a network of dentists in our community who will treat registered MyClinic patients at no charge as part of the Volunteer Healthcare Provider Program. Medical services are provided by licensed volunteer health providers. Patients are scheduled by appointment and referrals are made to specialists as available. Jupiter Medical Center provides Lab,Imaging including screening mammograms and Diabetes Education services to patients of MyClinic at no charge as well as administrative and other technical support. The goal is to be a true Medical Home that improves overall health and quality of life for its patients.
+
+The current MyClinic represents third phase in a process that began in January 2011 when a group of stakeholders came together to form a coalition to address the health needs of our most vulnerable neighbors. The coalition was comprised of representatives from the public and private sectors including: El Sol, Jupiter's Neighborhood Resource Center; Jupiter Medical Center; Town of Jupiter; Florida Health-Palm Beach County; and guidance from the Florida Public Health Institute.
+
+Phase One (February 2012)
+
+Funded by Quantum Foundation, Phase one was the formation of the collaborative Jupiter Volunteer Clinic which operated on Saturday mornings in the Jupiter Auxiliary Health Center and represented the quickest way to initiate services.The Jupiter Volunteer Clinic was recognized by the Palm Beach County Medical Society for its uniques collaborative approach and was awarded a Heroes in Medicince Award for Community Outreach (May 2013). 
+
+Phase Two (January 2014)
+
+With funding provided by Quantum Foundation, Palm Healthcare Foundation and Allegany Franciscan Ministries, and equipment donated by Clinics Can Help, the Jupiter Volunteer Clinic quickly transitioned to the independent, not for profit MyClinic, Inc. which was located in a temporary moduar building next to the Jupiter Auxiliary Health Center. This move allowed for expanded hours of operation and services in dedicated space.
+
+Phase Three (opening February 2017)  EXCITING NEWS!
+
+MyClinic has purchased a 5000 sf medical office building and has moved to permanent space. Since there are few providers in our area that offer comprehensive outpatient primary care for patients who have limited financial resources and basic insurance or Medicaid, MyClinic is leasing space within the new facility to the C. L. Brumback Primary Care Clinics, operated by the Health Care District of Palm Beach County. Both entities will provide services to their patients at this location. This unique model will broaden the healthcare safety net for our neighbors in need in northern Palm Beach County and will be truly TRANSFORMATIONAL!</p>
+
+<p><em>Please notify us if you do not receive your test results within 2 weeks. </em></p>
+<p><em>Thank you for partnering with us!</em></p>
+									<div class="pagination">
+									  									</div><!--.pagination-->
+								  </div><!--#post-# .post-->
+							  
+								                        </div>
+                    </div>
+                    <br class="clear" />
+                </div>
+           	</div>
+        </div>
+    </div>	 
+	</div>
+</body>
+</html>

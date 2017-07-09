@@ -1,0 +1,189 @@
+*{
+	margin: 0;
+	padding: 0;
+    font-family: arial;
+    <!-- background-image: url("~/img/wallpaper.jpg"); -->
+}
+.clear:after{
+	content:"";
+	clear:both;
+	display:block;
+}
+.left{float:left;}
+.right{float:right;}
+.wrapper{
+	width: 1000px;
+	margin: 0 auto;
+box-shadow: 0 0 50px rgba(0,0,0, 0.3);
+    background: #696969;
+}
+
+body {
+<!--
+	background-image: url("~/img/wallpaper.jpg");
+-->
+	
+}
+#header  {
+	background-color:#333333;
+    padding: 10px;
+    color: white;   
+}
+.logo{
+	height: 60px;
+}
+
+.nav_top{
+    font-size: 13px;
+}
+.nav_top > a{
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+nav{
+    margin-top: 10px;
+}
+nav > ul{
+	list-style-type: none;
+}
+nav > ul > li{
+	color: #fff;
+    display: inline-block;
+    padding: 10px;
+    transition: 0.5s all;
+}
+nav > ul > li:hover{
+	color: black;
+    background: #fff;
+}
+nav > ul > li:hover > a{
+	color: black;
+}
+nav > ul > li > a{
+	color: #fff;
+    text-decoration: none;
+}
+div#footer ul li {
+    color: white;
+    background-color:#1a0000;
+}
+
+.about{
+    padding:40px !important;
+}
+div.article {
+    margin: 5px;
+    padding: 10px;
+    background-color: white;
+}
+.contact{
+    padding:40px !important;
+
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 0.5em 0 0 0;
+    font-weight: bold;
+   
+}
+
+.editor-field {
+    margin: 0 0 0 0;
+     font-size: 17px;
+    padding: 5px 0px;
+    width: 100%;
+}
+   
+}
+
+.form-group{
+    padding: 10px;
+}
+.form-group > label{
+    font-weight: bold;
+}
+.form-group > label:after{
+  
+    content: ":";
+}
+.form-group > input{   
+    font-size: 17px;
+    padding: 5px 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.form-group > p > b >select{ 
+    font-size: 17px;
+    padding: 5px 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-submit{
+    padding: 10px;
+    min-width: 50px;
+    margin: 0 10px;
+    background: #927892;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+ol{
+    margin-left: 30px;
+}
+.table{
+    width: 100%;
+}
+.table td, .table th{
+    padding: 6px;
+}
+.table.table-bordered{
+    border: 1px solid #ccc;
+}
+.table.table-bordered th, .table.table-bordered td{
+    border: 1px solid #ccc;
+}
+
+
+
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+     background-color: #baa4ba;
+    color:red;
+}
+
+.field-validation-valid {
+    display: none;
+
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: rgba(0,0,0, 0.3);
+    color:red;
+}
+
+.validation-summary-errors {
+   border:2px solid red;
+  color:red;
+  margin:6px;
+  width:30%;
+}
+
+.validation-summary-valid {
+    display: none;
+}
